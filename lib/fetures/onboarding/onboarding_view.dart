@@ -1,3 +1,4 @@
+import 'package:booking_appointment/fetures/login/data/models/login_request_body.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/doc_logo_and_name.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/doctor_image_and_text.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/get_started_buttom.dart';
@@ -15,16 +16,16 @@ class OnboardingView extends StatelessWidget {
              padding:  EdgeInsets.only(top: 30.h,bottom: 30.h),
              child: Column(
                  children: [
-                   DocLogoAndName(),
+                   const DocLogoAndName(),
                    SizedBox(height: 30.h,),
-                   DoctorImageAndText(),
+                   const DoctorImageAndText(),
                    Padding(
                      padding:  EdgeInsets.symmetric(horizontal: 20.0.h),
                      child: Column(
                        children: [
-                         Text('Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',textAlign: TextAlign.center,),
+                         const Text('Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',textAlign: TextAlign.center,),
                          SizedBox(height: 30.h,),
-                         GetStartedButton()
+                         const GetStartedButton()
                        ],
                      ),
                    )

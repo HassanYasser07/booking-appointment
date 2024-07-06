@@ -1,0 +1,78 @@
+import 'dart:ui';
+
+import 'package:booking_appointment/core/theme/colors.dart';
+import 'package:booking_appointment/core/theme/font_weight_helper.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class Styles{
+  static TextStyle font24black700w=TextStyle(
+    fontSize: 24.sp,
+    color: Colors.black,
+      fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font24Blue700w=TextStyle(
+      fontSize: 24.sp,
+      color: ColorsMaster.mainBlue,
+      fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font16BlueRegular=TextStyle(
+    fontSize: 16.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.normal,
+  );static TextStyle font13GrayRegular=TextStyle(
+    fontSize: 13.sp,
+    color: Colors.grey,
+    fontWeight: FontWeightHelper.normal,
+  );
+  static TextStyle font32blueBold=TextStyle(
+      fontSize: 32.sp,
+      color: ColorsMaster.mainBlue,
+       fontWeight: FontWeight.w900
+  );
+  static TextStyle font13gray=TextStyle(
+      fontSize: 13.sp,
+      color: Colors.grey,
+      fontWeight: FontWeight.normal
+  );
+  static TextStyle font16white=TextStyle(
+      fontSize: 16.sp,
+      color: Colors.white,
+      fontWeight: FontWeight.normal
+  );
+  static TextStyle font14RegularGray=TextStyle(
+      fontSize: 14.sp,
+      color: Colors.grey,
+      fontWeight: FontWeightHelper.normal
+  );
+  static TextStyle font14RegularLightGray=TextStyle(
+      fontSize: 14.sp,
+      color: ColorsMaster.lightGray,
+      fontWeight: FontWeightHelper.normal
+  );
+  static TextStyle font14MediumDarkBlue=TextStyle(
+      fontSize: 14.sp,
+      color: ColorsMaster.darkBlue,
+      fontWeight: FontWeightHelper.medium
+  );
+  static TextStyle font13MediumDarkBlue=TextStyle(
+      fontSize: 13.sp,
+      color: ColorsMaster.mainBlue,
+      fontWeight: FontWeightHelper.normal
+  );
+  static TextStyle font13DarkBlueMedium=TextStyle(
+      fontSize: 13.sp,
+      color: ColorsMaster.darkBlue,
+      fontWeight: FontWeightHelper.medium
+  );
+  static TextStyle font13BlueSemiBold=TextStyle(
+      fontSize: 13.sp,
+      color: ColorsMaster.mainBlue,
+      fontWeight: FontWeightHelper.semiBold
+  );
+  static TextStyle font13DarkBlueRegular=TextStyle(
+      fontSize: 13.sp,
+      color: ColorsMaster.darkBlue,
+      fontWeight: FontWeightHelper.normal
+  );
+}

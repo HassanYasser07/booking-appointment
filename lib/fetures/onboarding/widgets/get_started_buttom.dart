@@ -1,6 +1,9 @@
-import 'package:booking_appointment/core/routing/style.dart';
+import 'package:booking_appointment/core/theme/style.dart';
 import 'package:booking_appointment/core/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../core/routing/routes.dart';
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});
@@ -20,7 +23,9 @@ class GetStartedButton extends StatelessWidget {
       )
       )
       ),
-        onPressed: (){},
+        onPressed: (){
+          GoRouter.of(context).push(Routes.kLoginView);
+        },
         child: Text('Get Started',style:Styles.font16white), );
   }
 }

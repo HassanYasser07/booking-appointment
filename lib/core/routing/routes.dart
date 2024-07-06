@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../fetures/onboarding/onboarding_view.dart';
 
 abstract class Routes{
-  static const kHomeView='/loginView';
+  static const kLoginView='/loginView';
 
 
   static final router = GoRouter(
@@ -15,7 +15,7 @@ abstract class Routes{
         builder: (context, state) => const OnboardingView(),
       ),
       GoRoute(
-        path: kHomeView,
+        path: kLoginView,
         builder: (context, state) => const LoginView(),
       ),
 
