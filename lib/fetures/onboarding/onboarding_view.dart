@@ -1,4 +1,3 @@
-import 'package:booking_appointment/fetures/login/data/models/login_request_body.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/doc_logo_and_name.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/doctor_image_and_text.dart';
 import 'package:booking_appointment/fetures/onboarding/widgets/get_started_buttom.dart';

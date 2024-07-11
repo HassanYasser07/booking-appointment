@@ -15,6 +15,10 @@ class Styles{
       fontSize: 24.sp,
       color: ColorsMaster.mainBlue,
       fontWeight: FontWeightHelper.bold,
+  ); static TextStyle font15DartBlueRegular=TextStyle(
+    fontSize: 15.sp,
+    color: ColorsMaster.darkBlue,
+    fontWeight: FontWeightHelper.normal,
   );
   static TextStyle font16BlueRegular=TextStyle(
     fontSize: 16.sp,
@@ -34,6 +38,11 @@ class Styles{
       fontSize: 13.sp,
       color: Colors.grey,
       fontWeight: FontWeight.normal
+  );
+  static TextStyle font14BlueSemiBold=TextStyle(
+      fontSize: 14.sp,
+      color: Colors.blue,
+      fontWeight: FontWeightHelper.semiBold
   );
   static TextStyle font16white=TextStyle(
       fontSize: 16.sp,
