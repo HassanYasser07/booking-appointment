@@ -31,15 +31,15 @@ class PasswordValidations extends StatelessWidget {
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('At least 1 uppercase letter', hasNumber),
+        buildValidationRow('At least 1 number ', hasNumber),
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('At least 1 number', hasMinLength),
+        buildValidationRow('At least 8 characters long', hasMinLength),
         SizedBox(
           height: 2.h,
         ),
-        buildValidationRow('At least 8 characters long', hasSpecialCharacters),
+        buildValidationRow('At least 1 special character', hasSpecialCharacters),
       ],
     );
   }

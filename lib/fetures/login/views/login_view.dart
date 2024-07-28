@@ -64,10 +64,7 @@ class LoginView extends StatelessWidget {
         .currentState!
         .validate()) {
       context.read<LoginCubit>().emitLoadingState(
-          LoginRequestBody(
-              email: context.read<LoginCubit>().emailController.text,
-              password:context.read<LoginCubit>().passwordController.text
-          )
+
 
       );
     }
