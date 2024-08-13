@@ -1,5 +1,5 @@
 import 'package:booking_appointment/core/dependency_injection/dependency_injection.dart';
-import 'package:booking_appointment/fetures/home/home_view.dart';
+import 'package:booking_appointment/fetures/home/view/home_view.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_cubit.dart';
 import 'package:booking_appointment/fetures/login/views/login_view.dart';
 import 'package:booking_appointment/fetures/signUp/logic/sign_up_cubit.dart';

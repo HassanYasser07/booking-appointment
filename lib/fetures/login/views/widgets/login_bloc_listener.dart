@@ -1,5 +1,5 @@
 import 'package:booking_appointment/core/theme/style.dart';
-import 'package:booking_appointment/fetures/home/home_view.dart';
+import 'package:booking_appointment/fetures/home/view/home_view.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_cubit.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_state.dart';
 import 'package:flutter/material.dart';
