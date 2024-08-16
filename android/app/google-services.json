@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742289045647",
+    "project_id": "flutter-app-distribution-44807",
+    "storage_bucket": "flutter-app-distribution-44807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742289045647:android:7eb2328264af5fa64bd8fa",
+        "android_client_info": {
+          "package_name": "com.example.booking_appointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNgAo9rRAoCKZhbk0olpli05cv3UFJRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
