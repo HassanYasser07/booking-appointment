@@ -108,7 +108,17 @@ static TextStyle font24BlueBold=TextStyle(
   static TextStyle font12DGrayRegular=TextStyle(
       fontSize: 12.sp,
       color: ColorsMaster.moreLighterGray,
-      fontWeight: FontWeightHelper.normal
+      fontWeight: FontWeightHelper.normal,
+  );
+  static TextStyle font18WhiteMedium=TextStyle(
+    fontSize: 18.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle font12BlueRegular=TextStyle(
+    fontSize: 12.sp,
+    color: Colors.blue,
+    fontWeight: FontWeightHelper.medium,
   );
 
 }

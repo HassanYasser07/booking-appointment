@@ -14,6 +14,8 @@ class HomeTopBar extends StatelessWidget {
           children: [
             Text('Hi,Hassan',style: Styles.font18DDarkBlueBold,),
             Text('hkjdh jsdh gydgc',style:Styles.font12DGrayRegular ,),
+
+
           ],
         ),
         const Spacer(),
