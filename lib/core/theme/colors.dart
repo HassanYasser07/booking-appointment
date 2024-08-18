@@ -6,6 +6,8 @@ class ColorsMaster{
   static const Color darkBlue =Color( 0xff242424);
   static const Color moreLightGray =Color( 0xffFDFDFF);
   static const Color moreLighterGray = Color(0xFFF5F5F5);
+  static const Color lightBlue = Color(0xFFF48ff);
+
 
 
 

@@ -105,20 +105,26 @@ static TextStyle font24BlueBold=TextStyle(
       color: ColorsMaster.darkBlue,
       fontWeight: FontWeightHelper.normal
   );
+  static TextStyle font18DDarkBlueSemiBold=TextStyle(
+      fontSize: 18.sp,
+      color: ColorsMaster.darkBlue,
+      fontWeight: FontWeightHelper.semiBold
+  );
   static TextStyle font12DGrayRegular=TextStyle(
-      fontSize: 12.sp,
-      color: ColorsMaster.moreLighterGray,
-      fontWeight: FontWeightHelper.normal,
+      fontSize: 13.sp,
+      color: ColorsMaster.darkBlue,
+      fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle font12BlueRegular=TextStyle(
+    fontSize: 12.sp,
+    color: Colors.blue,
+    fontWeight: FontWeightHelper.normal,
   );
   static TextStyle font18WhiteMedium=TextStyle(
     fontSize: 18.sp,
     color: Colors.white,
     fontWeight: FontWeightHelper.medium,
   );
-  static TextStyle font12BlueRegular=TextStyle(
-    fontSize: 12.sp,
-    color: Colors.blue,
-    fontWeight: FontWeightHelper.medium,
-  );
+
 
 }
