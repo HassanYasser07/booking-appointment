@@ -16,7 +16,7 @@ void main() async{
   runApp(const DocApp());
 }
 cheekIfLoggedInUser()async{
-  String userToken= await SharedPrefHelper.getString(SharedPrefKey.userToken);
+  String userToken= await SharedPrefHelper.getSecuredString(SharedPrefKey.userToken);
   print('userToken============================================== :$userToken');
   print('object=====================================================');
   if(userToken.isNullOrEmpty()){

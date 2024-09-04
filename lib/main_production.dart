@@ -17,7 +17,7 @@ await cheekIfLoggedInUser();
   runApp(const DocApp());
 }
 cheekIfLoggedInUser()async{
-  String userToken= await SharedPrefHelper.getString(SharedPrefKey.userToken);
+  String userToken= await SharedPrefHelper.getSecuredString(SharedPrefKey.userToken);
   if(!userToken.isNullOrEmpty()){
     return isLoggedInUser =true;
 
