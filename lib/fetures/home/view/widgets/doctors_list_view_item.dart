@@ -1,10 +1,12 @@
 import 'package:booking_appointment/core/theme/style.dart';
+import 'package:booking_appointment/fetures/home/data/models/specializations_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DoctorsListViewItem extends StatelessWidget {
-  const DoctorsListViewItem({super.key});
+  final Doctors? doctorsModel;
+  const DoctorsListViewItem({super.key, required this.doctorsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,9 @@ class DoctorsListViewItem extends StatelessWidget {
         Expanded(
           child: Column(
             children: [
-              Text('Dr.Hasssa El Shaggggggggggggggggggggggmeyvs',style: Styles.font18DDarkBlueBold,overflow: TextOverflow.ellipsis,),
-              Text('general',textAlign: TextAlign.start,),
-              Text('(1500 reviews)'),
+              Text(doctorsModel?.name ?? 'Name',style: Styles.font18DDarkBlueBold,overflow: TextOverflow.ellipsis,),
+              Text('${doctorsModel?.degree} | ${doctorsModel?.photo}',textAlign: TextAlign.start,),
+              Text(doctorsModel?.email ??''),
 
             ],
           ),

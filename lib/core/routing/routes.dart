@@ -1,4 +1,5 @@
 import 'package:booking_appointment/core/dependency_injection/dependency_injection.dart';
+import 'package:booking_appointment/fetures/home/logic/home_cubit.dart';
 import 'package:booking_appointment/fetures/home/view/home_view.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_cubit.dart';
 import 'package:booking_appointment/fetures/login/views/login_view.dart';
@@ -43,9 +44,12 @@ abstract class Routes {
       ),
       GoRoute(
         path: kHomeView,
-        builder: (context, state) => const HomeView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => HomeCubit(getIt())..getSpecializations(),
+            child:  HomeView()),
       ),
 
     ],
   );
+
 }
