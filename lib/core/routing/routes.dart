@@ -1,4 +1,5 @@
 import 'package:booking_appointment/core/dependency_injection/dependency_injection.dart';
+import 'package:booking_appointment/core/helper/constants.dart';
 import 'package:booking_appointment/fetures/home/logic/home_cubit.dart';
 import 'package:booking_appointment/fetures/home/view/home_view.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_cubit.dart';
@@ -20,6 +21,7 @@ abstract class Routes {
 
 
   static final router = GoRouter(
+    initialLocation: isLoggedInUser ? Routes.kHomeView :   Routes.kLoginView,
 
     routes: [
       GoRoute(
