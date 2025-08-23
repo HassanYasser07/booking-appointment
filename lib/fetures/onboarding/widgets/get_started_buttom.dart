@@ -3,7 +3,7 @@ import 'package:booking_appointment/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../core/routing/routes.dart';
+import '../../../core/routing/routing.dart';
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});

@@ -1,12 +1,11 @@
 import 'package:booking_appointment/core/theme/style.dart';
-import 'package:booking_appointment/fetures/signUp/view/widgets/already_have_account.dart';
+import 'package:booking_appointment/fetures/signUp/view/widgets/aleady_have_acount.dart';
 import 'package:booking_appointment/fetures/signUp/view/widgets/sign_up_bloc_listener.dart';
 import 'package:booking_appointment/fetures/signUp/view/widgets/sign_up_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 import '../../../core/widgets/app_text_buttom.dart';
 import '../../login/views/widgets/terms_and_conditions_text.dart';
@@ -29,16 +28,22 @@ class SignUpView extends StatelessWidget {
                   'Create Account',
                   style: Styles.font24BlueBold,
                 ),
-                SizedBox(height: 8.h,),
+                SizedBox(
+                  height: 8.h,
+                ),
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
                   style: Styles.font14GrayRegular,
                 ),
-                SizedBox(height: 36.h,),
+                SizedBox(
+                  height: 36.h,
+                ),
                 Column(
                   children: [
                     const SignupForm(),
-                    SizedBox(height: 40.h,),
+                    SizedBox(
+                      height: 40.h,
+                    ),
                     AppTextButton(
                       buttonText: "Create Account",
                       textStyle: Styles.font13DarkBlueRegular,
@@ -46,9 +51,13 @@ class SignUpView extends StatelessWidget {
                         validateThenDoSignup(context);
                       },
                     ),
-                    SizedBox(height: 16.h,),
+                    SizedBox(
+                      height: 16.h,
+                    ),
                     const TermsAndConditionsText(),
-                    SizedBox(height: 30.h,),
+                    SizedBox(
+                      height: 30.h,
+                    ),
                     const AlreadyHaveAccountText(),
                     const SignupBlocListener(),
                   ],

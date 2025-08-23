@@ -13,17 +13,19 @@ class DoctorBlueContainer extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            alignment: Alignment.topLeft,
+
             height: 165.h,
             width: double.infinity,
-            padding: EdgeInsets.all(16.h),
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/home_blue_pattern.png'),
+            padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 16.h),
+            decoration:  BoxDecoration(
+              borderRadius:BorderRadius.circular(24),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/home_blue_pattern.png',),fit: BoxFit.cover
               )
             ),
             child:Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
                 Text('Book and\nschedule \nwith nearest doctor',style: Styles.font18WhiteMedium,textAlign: TextAlign.start,),
            SizedBox(height: 16.h,),
@@ -46,9 +48,9 @@ class DoctorBlueContainer extends StatelessWidget {
       ),
       ),
           Positioned(
-            right: 0,
+            right: 30.w,
               left: 190,
-              bottom: 17,
+              bottom: 8.h,
               child: Image.asset('assets/images/omar.png',height: 185.h,))
       ]
       ),
