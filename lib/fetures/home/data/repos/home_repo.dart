@@ -16,7 +16,10 @@ class HomeRepo {
       final response =await _homeApiService.getSpecializations();print('11');
 
       return ApiResult.success(response);
-    }catch(error){print('12');
+    }catch(error){
+      print(111111);
+
+      print(error);
       return ApiResult.failure(ErrorHandler.handle(error));
     }
 

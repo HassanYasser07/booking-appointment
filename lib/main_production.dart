@@ -9,7 +9,7 @@ import 'doc_app.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  setupGitIt();
+ await setupGitIt();
 
 await ScreenUtil.ensureScreenSize();
 await cheekIfLoggedInUser();

@@ -33,7 +33,7 @@ class Doctors{
   String? photo;
   String? gender;
   @JsonKey(name: 'appoint_price')
-  String? price;
+  int? price;
   String? degree;
 
   Doctors({this.id,this.name,this.email,this.photo,this.gender,this.price,this.degree});

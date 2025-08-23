@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 
-import '../../../../core/routing/routes.dart';
+import '../../../../core/routing/routing.dart';
 import '../../../../core/theme/colors.dart';
 
 import '../../logic/sign_up_cubit.dart';

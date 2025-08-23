@@ -1,0 +1,1 @@
+C:\Users\hassa\AndroidStudioProjects\booking_appointment\build\app\intermediates\cxx\Debug\4ef50124\obj\arm64-v8a
