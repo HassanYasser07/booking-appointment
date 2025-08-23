@@ -10,7 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../fetures/onboarding/onboarding_view.dart';
 import '../helper/constants.dart';
-import '../helper/shared_pref_helper.dart';
 
 
 
@@ -25,30 +24,6 @@ abstract class Routes {
 
   static final router = GoRouter(
     initialLocation: isLoggedInUser ?kHomeView : kLoginView,
-    // redirect: (context, state) async {
-    //   final token = await SharedPrefHelper.getSecuredString(SharedPrefKey.userToken);
-    //   final isLoggedIn = token != null && token.isNotEmpty;
-    //
-    //   final onboardingShown = await SharedPrefHelper.getBool('isOnboardingShown') ?? false;
-    //
-    //   // أول مرة يفتح التطبيق → يروح Onboarding
-    //   if (!onboardingShown && state.fullPath != kOnboardingView) {
-    //     return kOnboardingView;
-    //   }
-    //
-    //   // لو المستخدم مش مسجل دخول → يروح Login
-    //   if (!isLoggedIn && state.fullPath != kLoginView && state.fullPath != kOnboardingView) {
-    //     return kLoginView;
-    //   }
-    //
-    //   // لو مسجل دخول → يروح Home مباشرة
-    //   if (isLoggedIn && (state.fullPath == '/' || state.fullPath == kLoginView || state.fullPath == kOnboardingView)) {
-    //     return kHomeView;
-    //   }
-    //
-    //   return null;
-    // },
-
     routes: [
       GoRoute(
         path: '/',
