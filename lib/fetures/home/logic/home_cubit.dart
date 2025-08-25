@@ -19,8 +19,8 @@ class HomeCubit extends Cubit<HomeState> {
       getDoctorsList(specializationId: specializationList?.first?.id  ?? 0);
        emit(HomeState.specializationsSuccess(specializationList)); print('5');
     },
-        failure: (errorHandler){ print('6');
-      emit(HomeState.specializationsFailure(errorHandler));
+        failure: (apiErrorModel){ print('6');
+      emit(HomeState.specializationsFailure(apiErrorModel));
         });
   }
  void getDoctorsList({required int specializationId}){
@@ -29,7 +29,7 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.doctorsSuccess(doctorsList));
 
     }else{
-      emit( HomeState.doctorsFailure(ErrorHandler.handle('no doctors list')));
+      emit( HomeState.doctorsFailure());
 
 
     }

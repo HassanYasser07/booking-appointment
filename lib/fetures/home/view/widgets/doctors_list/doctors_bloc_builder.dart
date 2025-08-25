@@ -20,8 +20,8 @@ class DoctorsBlocBuilder extends StatelessWidget {
           return state.maybeWhen(
               doctorsSuccess: (doctorsList){
                 return success(doctorsList);
-              },doctorsFailure: (errorHandler){
-                return error(errorHandler);
+              },doctorsFailure: (){
+                return error();
               },orElse: (){
                 return const SizedBox.shrink();
               });
@@ -35,6 +35,6 @@ Widget success  (doctorsList){
   return DoctorsListView(doctorsList: doctorsList,);
 
 }
-Widget error  (errorHandler){
+Widget error  (){
   return const SizedBox.shrink();
 }
