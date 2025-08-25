@@ -8,6 +8,8 @@ import 'package:booking_appointment/fetures/signUp/view/sign_up_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../fetures/doctor_details/logic/doctor_details_cubit.dart';
+import '../../fetures/doctor_details/view/doctor_details_view.dart';
 import '../../fetures/onboarding/onboarding_view.dart';
 import '../helper/constants.dart';
 
@@ -18,6 +20,7 @@ abstract class Routes {
   static const kHomeView = '/homeView';
   static const kSignupView = '/signupView';
   static const kOnboardingView = '/onboardingView';
+  static const kDoctorDetailsView = '/doctorDetailsView';
 
 
 
@@ -27,7 +30,7 @@ abstract class Routes {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SizedBox.shrink(), // شاشة فاضية لأنه راح يروح Redirect
+        builder: (context, state) => const SizedBox.shrink(),
       ),
       GoRoute(
         path: kOnboardingView,
@@ -55,6 +58,16 @@ abstract class Routes {
           create: (context) => HomeCubit(getIt())..getSpecializations(),
           child: const HomeView(),
         ),
+      ),
+      GoRoute(
+        path: kDoctorDetailsView,
+        builder: (context, state) {
+          final doctorId = state.extra as int;
+          return BlocProvider(
+            create: (context) => DoctorDetailsCubit(getIt())..getDoctorDetails(doctorId),
+            child: DoctorDetailsView(doctorId: doctorId),
+          );
+        },
       ),
 
     ],

@@ -9,6 +9,9 @@ import 'package:booking_appointment/fetures/signUp/data/repos/sign_up_repo.dart'
 import 'package:booking_appointment/fetures/signUp/logic/sign_up_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import '../../fetures/doctor_details/data/apis/doctor_details_api_service.dart';
+import '../../fetures/doctor_details/data/repos/doctor_details_repo.dart';
+import '../../fetures/doctor_details/logic/doctor_details_cubit.dart';
 
 final getIt = GetIt.instance;
 Future<void> setupGitIt()async{
@@ -26,5 +29,10 @@ Future<void> setupGitIt()async{
   getIt.registerLazySingleton<HomeApiServices>(()=>HomeApiServices(dio));
   getIt.registerFactory<HomeRepo>(()=>HomeRepo(getIt()));
   getIt.registerFactory<HomeCubit>(()=>HomeCubit(getIt()));
+
+  getIt.registerLazySingleton<DoctorApiService>(()=>DoctorApiService(dio));
+  getIt.registerFactory<DoctorRepository>(()=>DoctorRepository(getIt()));
+  getIt.registerFactory<DoctorDetailsCubit>(()=>DoctorDetailsCubit(getIt()));
+
 }
 
