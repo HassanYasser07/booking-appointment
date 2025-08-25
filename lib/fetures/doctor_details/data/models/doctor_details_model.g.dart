@@ -6,17 +6,37 @@ part of 'doctor_details_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+DoctorDetailsResponse _$DoctorDetailsResponseFromJson(
+        Map<String, dynamic> json) =>
+    DoctorDetailsResponse(
+      message: json['message'] as String?,
+      data: json['data'] == null
+          ? null
+          : DoctorDetailsModel.fromJson(json['data'] as Map<String, dynamic>),
+      status: json['status'] as bool?,
+      code: (json['code'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$DoctorDetailsResponseToJson(
+        DoctorDetailsResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+      'data': instance.data,
+      'status': instance.status,
+      'code': instance.code,
+    };
+
 DoctorDetailsModel _$DoctorDetailsModelFromJson(Map<String, dynamic> json) =>
     DoctorDetailsModel(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+      email: json['email'] as String?,
+      phone: json['phone'] as String?,
       photo: json['photo'] as String?,
+      gender: json['gender'] as String?,
       address: json['address'] as String?,
-      degree: json['degree'] as String?,
-      price: json['appoint_price'] as String?,
-      startingTime: json['start_time'] as String?,
-      endingTime: json['end_time'] as String?,
       description: json['description'] as String?,
+      degree: json['degree'] as String?,
       specialization: json['specialization'] == null
           ? null
           : Specialization.fromJson(
@@ -24,27 +44,33 @@ DoctorDetailsModel _$DoctorDetailsModelFromJson(Map<String, dynamic> json) =>
       city: json['city'] == null
           ? null
           : City.fromJson(json['city'] as Map<String, dynamic>),
+      appointPrice: json['appoint_price'] as num?,
+      startTime: json['start_time'] as String?,
+      endTime: json['end_time'] as String?,
     );
 
 Map<String, dynamic> _$DoctorDetailsModelToJson(DoctorDetailsModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'email': instance.email,
+      'phone': instance.phone,
       'photo': instance.photo,
+      'gender': instance.gender,
       'address': instance.address,
-      'degree': instance.degree,
-      'appoint_price': instance.price,
-      'start_time': instance.startingTime,
-      'end_time': instance.endingTime,
       'description': instance.description,
+      'degree': instance.degree,
       'specialization': instance.specialization,
       'city': instance.city,
+      'appoint_price': instance.appointPrice,
+      'start_time': instance.startTime,
+      'end_time': instance.endTime,
     };
 
 Specialization _$SpecializationFromJson(Map<String, dynamic> json) =>
     Specialization(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
     );
 
 Map<String, dynamic> _$SpecializationToJson(Specialization instance) =>
@@ -54,11 +80,26 @@ Map<String, dynamic> _$SpecializationToJson(Specialization instance) =>
     };
 
 City _$CityFromJson(Map<String, dynamic> json) => City(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+      governrate: json['governrate'] == null
+          ? null
+          : Governrate.fromJson(json['governrate'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CityToJson(City instance) => <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'governrate': instance.governrate,
+    };
+
+Governrate _$GovernrateFromJson(Map<String, dynamic> json) => Governrate(
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+    );
+
+Map<String, dynamic> _$GovernrateToJson(Governrate instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
     };
