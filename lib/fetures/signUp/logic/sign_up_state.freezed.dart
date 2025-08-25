@@ -21,7 +21,7 @@ mixin _$SignupState<T> {
     required TResult Function() initial,
     required TResult Function() signupLoading,
     required TResult Function(T data) signupSuccess,
-    required TResult Function(String error) signupError,
+    required TResult Function(ApiErrorModel apiError) signupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$SignupState<T> {
     TResult? Function()? initial,
     TResult? Function()? signupLoading,
     TResult? Function(T data)? signupSuccess,
-    TResult? Function(String error)? signupError,
+    TResult? Function(ApiErrorModel apiError)? signupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$SignupState<T> {
     TResult Function()? initial,
     TResult Function()? signupLoading,
     TResult Function(T data)? signupSuccess,
-    TResult Function(String error)? signupError,
+    TResult Function(ApiErrorModel apiError)? signupError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,7 +127,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() initial,
     required TResult Function() signupLoading,
     required TResult Function(T data) signupSuccess,
-    required TResult Function(String error) signupError,
+    required TResult Function(ApiErrorModel apiError) signupError,
   }) {
     return initial();
   }
@@ -138,7 +138,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? initial,
     TResult? Function()? signupLoading,
     TResult? Function(T data)? signupSuccess,
-    TResult? Function(String error)? signupError,
+    TResult? Function(ApiErrorModel apiError)? signupError,
   }) {
     return initial?.call();
   }
@@ -149,7 +149,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? initial,
     TResult Function()? signupLoading,
     TResult Function(T data)? signupSuccess,
-    TResult Function(String error)? signupError,
+    TResult Function(ApiErrorModel apiError)? signupError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,7 +241,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     required TResult Function() initial,
     required TResult Function() signupLoading,
     required TResult Function(T data) signupSuccess,
-    required TResult Function(String error) signupError,
+    required TResult Function(ApiErrorModel apiError) signupError,
   }) {
     return signupLoading();
   }
@@ -252,7 +252,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult? Function()? initial,
     TResult? Function()? signupLoading,
     TResult? Function(T data)? signupSuccess,
-    TResult? Function(String error)? signupError,
+    TResult? Function(ApiErrorModel apiError)? signupError,
   }) {
     return signupLoading?.call();
   }
@@ -263,7 +263,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult Function()? initial,
     TResult Function()? signupLoading,
     TResult Function(T data)? signupSuccess,
-    TResult Function(String error)? signupError,
+    TResult Function(ApiErrorModel apiError)? signupError,
     required TResult orElse(),
   }) {
     if (signupLoading != null) {
@@ -383,7 +383,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     required TResult Function() initial,
     required TResult Function() signupLoading,
     required TResult Function(T data) signupSuccess,
-    required TResult Function(String error) signupError,
+    required TResult Function(ApiErrorModel apiError) signupError,
   }) {
     return signupSuccess(data);
   }
@@ -394,7 +394,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult? Function()? initial,
     TResult? Function()? signupLoading,
     TResult? Function(T data)? signupSuccess,
-    TResult? Function(String error)? signupError,
+    TResult? Function(ApiErrorModel apiError)? signupError,
   }) {
     return signupSuccess?.call(data);
   }
@@ -405,7 +405,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult Function()? initial,
     TResult Function()? signupLoading,
     TResult Function(T data)? signupSuccess,
-    TResult Function(String error)? signupError,
+    TResult Function(ApiErrorModel apiError)? signupError,
     required TResult orElse(),
   }) {
     if (signupSuccess != null) {
@@ -467,7 +467,7 @@ abstract class _$$SignupErrorImplCopyWith<T, $Res> {
           $Res Function(_$SignupErrorImpl<T>) then) =
       __$$SignupErrorImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String error});
+  $Res call({ApiErrorModel apiError});
 }
 
 /// @nodoc
@@ -481,13 +481,13 @@ class __$$SignupErrorImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = null,
+    Object? apiError = null,
   }) {
     return _then(_$SignupErrorImpl<T>(
-      error: null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == apiError
+          ? _value.apiError
+          : apiError // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
     ));
   }
 }
@@ -495,14 +495,14 @@ class __$$SignupErrorImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$SignupErrorImpl<T> implements SignupError<T> {
-  const _$SignupErrorImpl({required this.error});
+  const _$SignupErrorImpl(this.apiError);
 
   @override
-  final String error;
+  final ApiErrorModel apiError;
 
   @override
   String toString() {
-    return 'SignupState<$T>.signupError(error: $error)';
+    return 'SignupState<$T>.signupError(apiError: $apiError)';
   }
 
   @override
@@ -510,11 +510,12 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SignupErrorImpl<T> &&
-            (identical(other.error, error) || other.error == error));
+            (identical(other.apiError, apiError) ||
+                other.apiError == apiError));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, error);
+  int get hashCode => Object.hash(runtimeType, apiError);
 
   @JsonKey(ignore: true)
   @override
@@ -529,9 +530,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     required TResult Function() initial,
     required TResult Function() signupLoading,
     required TResult Function(T data) signupSuccess,
-    required TResult Function(String error) signupError,
+    required TResult Function(ApiErrorModel apiError) signupError,
   }) {
-    return signupError(error);
+    return signupError(apiError);
   }
 
   @override
@@ -540,9 +541,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult? Function()? initial,
     TResult? Function()? signupLoading,
     TResult? Function(T data)? signupSuccess,
-    TResult? Function(String error)? signupError,
+    TResult? Function(ApiErrorModel apiError)? signupError,
   }) {
-    return signupError?.call(error);
+    return signupError?.call(apiError);
   }
 
   @override
@@ -551,11 +552,11 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult Function()? initial,
     TResult Function()? signupLoading,
     TResult Function(T data)? signupSuccess,
-    TResult Function(String error)? signupError,
+    TResult Function(ApiErrorModel apiError)? signupError,
     required TResult orElse(),
   }) {
     if (signupError != null) {
-      return signupError(error);
+      return signupError(apiError);
     }
     return orElse();
   }
@@ -599,10 +600,10 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
 }
 
 abstract class SignupError<T> implements SignupState<T> {
-  const factory SignupError({required final String error}) =
+  const factory SignupError(final ApiErrorModel apiError) =
       _$SignupErrorImpl<T>;
 
-  String get error;
+  ApiErrorModel get apiError;
   @JsonKey(ignore: true)
   _$$SignupErrorImplCopyWith<T, _$SignupErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;

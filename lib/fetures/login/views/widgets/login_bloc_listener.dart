@@ -1,3 +1,4 @@
+import 'package:booking_appointment/core/networking/api_error_model.dart';
 import 'package:booking_appointment/core/theme/style.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_cubit.dart';
 import 'package:booking_appointment/fetures/login/logic/login_cubit/login_state.dart';
@@ -15,10 +16,10 @@ class LoginBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
-        current is Loading || current is Success || current is Error,
+        current is LoginLoading || current is LoginSuccess || current is LoginError,
       listener: (context, state) {
         state.whenOrNull(
-          loading: () {
+          loginLoading: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -28,12 +29,12 @@ class LoginBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: (loginResponse) {
+          loginSuccess: (loginResponse) {
             GoRouter.of(context).pop();
             GoRouter.of(context).push(Routes.kHomeView);
           },
-          error: (error) {
-            setupErrorState(context, error);
+          loginError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -41,7 +42,7 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context,  ApiErrorModel apiErrorModel) {
     GoRouter.of(context).pop();
     showDialog(
         context: context,
@@ -52,7 +53,7 @@ class LoginBlocListener extends StatelessWidget {
                 size: 32,
               ),
               content: Text(
-                error,
+                apiErrorModel.gerErrorMessage(),
                 style: Styles.font15DartBlueRegular,
               ),
               actions: [

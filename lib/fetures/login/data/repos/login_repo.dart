@@ -13,7 +13,7 @@ class LoginRepo{
       var response=await _apiServices.login(loginRequestBody);
       return ApiResult.success(response);
     }catch(error){
-      return ApiResult.failure(ErrorHandler.handle(error));
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
 
   }
