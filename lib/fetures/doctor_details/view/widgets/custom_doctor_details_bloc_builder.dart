@@ -1,11 +1,10 @@
 import 'package:booking_appointment/fetures/doctor_details/view/widgets/custom_app_bar_details.dart';
+import 'package:booking_appointment/fetures/doctor_details/view/widgets/doctor_address.dart';
+import 'package:booking_appointment/fetures/doctor_details/view/widgets/doctor_price.dart';
 import 'package:booking_appointment/fetures/doctor_details/view/widgets/working_time_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/theme/style.dart';
-import '../../../../core/widgets/app_text_buttom.dart';
 import '../../logic/doctor_details_cubit.dart';
 import 'contact_info.dart';
 import 'doctor_details_card.dart';
@@ -43,9 +42,11 @@ class CustomDoctorDetailsBlocBuilder extends StatelessWidget {
                   email:doctor.data!.email! ,
                   phone:doctor.data!.phone! ,
                 ),
+                DoctorAddress(address: doctor.data!.address!,),
+                DoctorPrice(price: doctor.data!.appointPrice!,),
 
                 //i want to make a space between the text and the button
-                AppTextButton(buttonText: 'Make An Appointment', textStyle: Styles.font16BlueRegular, onPressed: () {  } ,)
+             //  Spacer(),
               ],
             ),
           );
