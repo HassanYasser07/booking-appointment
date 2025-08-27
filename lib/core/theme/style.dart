@@ -108,7 +108,7 @@ static TextStyle font24BlueBold=TextStyle(
   static TextStyle font18DDarkBlueBold=TextStyle(
       fontSize: 18.sp,
       color: ColorsMaster.darkBlue,
-      fontWeight: FontWeightHelper.normal
+      fontWeight: FontWeightHelper.extraBold
   );
   static TextStyle font18DDarkBlueSemiBold=TextStyle(
       fontSize: 18.sp,
